@@ -11,7 +11,7 @@ from sklearn.feature_extraction.text import CountVectorizer,TfidfTransformer
 from sklearn.pipeline import Pipeline,FeatureUnion
 from sklearn.model_selection import train_test_split,GridSearchCV
 from sklearn.multioutput import MultiOutputClassifier
-from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -88,8 +88,8 @@ def build_model():
     pipeline = Pipeline([('vect',CountVectorizer(tokenizer=tokenize)),
                      ('tfidf',TfidfTransformer()),
                      ('clf', MultiOutputClassifier(RandomForestClassifier()))])   
-    parameters = {'clf__estimator__n_estimators':[100,150,200],
-                  'clf__estimator__min_samples_split': [2,5,10]}
+    parameters = {'clf__estimator__n_estimators':[10],
+                  'clf__estimator__min_samples_split': [2]}
                
 
     cv = GridSearchCV(pipeline,param_grid=parameters,n_jobs=4,cv=3,verbose=2)

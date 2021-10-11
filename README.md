@@ -1,6 +1,6 @@
 # Disaster Response Pipeline Project
 
-### Introduction to the project
+### Introduction to the project:
 
 This project looks at analyzing disaster data from Figure Eight to build a model for an API that classifies disaster messages.
 The project comprises of a data set containing real messages that were sent during disaster events. 
@@ -10,7 +10,7 @@ The following analysis was carried out in the project:
 2) A machine learning pipeline is created to categorize these events so that one can send the messages to an appropriate disaster relief agency.
 3) A web app is also created using Flask where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data. 
 
-### Dependencies
+### Dependencies:
 
 Python Version: 3.5+
 Libraries Required:
@@ -24,9 +24,9 @@ Libraries Required:
 Web Application and Visualisation: Flask and Plotly
 
 ### GitHub Link:
+https://github.com/joshiabj/Disaster-Response-Messages-Pipeline-Udacity
 
-
-### File Structure and description
+### File Structure and description:
 - app
 | - template
 | |- master.html  # main page of web app

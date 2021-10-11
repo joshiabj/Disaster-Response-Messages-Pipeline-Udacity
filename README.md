@@ -43,7 +43,7 @@ Web Application and Visualisation: Flask and Plotly
 
 - models
 |- train_classifier.py # ML Pipeline
-|- classifier.pkl  # saved model 
+|- classifier_1.pkl  # saved model 
 
 - README.md
 
@@ -54,7 +54,7 @@ Web Application and Visualisation: Flask and Plotly
     - To run ETL pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
-        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+        `python models/train_classifier.py data/DisasterResponse.db models/classifier_1.pkl`
 
 2. Run the following command in the app's directory to run your web app.
     `python run.py`
@@ -66,7 +66,6 @@ Web Application and Visualisation: Flask and Plotly
 
 1) The process.py file consists of the ETL pipeline. The transformation phase looks at cleaning the data by converting the categories variable to numerical and encoding them.
 2) The train_classifier.py consists of the ML pipeline. The cleaning process for the loaded dataset looks at applying NLP techniques such as removing stop words, lemmatizing, removing URLs/punctuation for the messages variable.
-3) The classifier.pkl pickle file contains the trained model
-
-### Screenshots of the webapp
+3) Certain categories such as missing_person, security have a very high F1 score for non-presence(0) and a very low F1 score for presence(1). This is caused due to the class imbalance in the messages dataset.
+4) The classifier_1.pkl pickle file contains the trained model.
 
